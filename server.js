@@ -7,6 +7,8 @@ require('./helper/db_setting')
 app.use(morgan('dev'))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+var cors = require('cors')
+app.use(cors())
 
 
 

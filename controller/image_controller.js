@@ -51,12 +51,14 @@ module.exports={
                 let data159 = async () => {
                     let val159 = await newuser.save()
                     await console.log(val159)
-                    res.json(val159)
+                    res.json({'value':'success','data':val159})
                 }
                 data159();
             }
             else{
                 console.log('outside')
+                console.log(req.user.dataValues)
+                console.log(req.body)
             let img_url = [];
                 fs.readdir('uploads/', (err, data) => {
                     if (err) { throw err }
@@ -117,7 +119,7 @@ module.exports={
                             let data159 = async () => {
                                 let val159 = await newuser.save()
                                 await console.log(val159)
-                                res.json(val159)
+                                res.json({'value':'success','data':val159})
                             }
                             data159();
                         }, 10000);

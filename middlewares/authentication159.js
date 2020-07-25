@@ -1,8 +1,8 @@
 var user_model = require("../model/user_model");
 module.exports = async (req, res, next) => {
     try {
-        if (req.header("Authorization")) {
-            const adminToken = req.header("Authorization")
+        if (req.params.token) {
+            const adminToken = req.params.token
             const admin = await user_model.findOne({ where: { token: adminToken } })
             if (admin){
                 req.user = admin
