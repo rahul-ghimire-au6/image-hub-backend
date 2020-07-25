@@ -71,7 +71,8 @@ module.exports={
                                         if (err) console.log(err.message)
                                         else {
                                             img_url.push(result.secure_url)
-                                            fs.unlink(`uploads/${temp[i]}`, (err) => { if (err) { throw err } else { console.log('deleted') } })
+                                            fs.unlink(`uploads/${temp[i]}`, (err) => { if (err) { console.log('delete error')
+                                                 throw err } else { console.log('deleted') } })
                                         }
                                     });
                                 }
