@@ -13,6 +13,8 @@ app.use(express.urlencoded({extended:true}))
 app.use(user_routes)
 app.use(image_routes)
 
+app.get('/',(req,res)=>res.send({'value':'success','message':'Welcome to Image Hub Created By Rahul R Ghimire'}))
+
 const port = process.env.PORT || 8080 
 
 app.listen(port, console.log(`server listening at ${port}`))
