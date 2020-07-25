@@ -13,6 +13,6 @@ app.use(express.urlencoded({extended:true}))
 app.use(user_routes)
 app.use(image_routes)
 
-const port = process.env.Port || 8080 
+const port = process.env.PORT || 8080 
 
 app.listen(port, console.log(`server listening at ${port}`))
