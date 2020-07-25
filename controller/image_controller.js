@@ -120,7 +120,7 @@ module.exports={
                             let newuser = new image_model({ ...temp1 })
                             let data159 = async () => {
                                 let val159 = await newuser.save()
-                                await console.log(val159)
+                                // await console.log(val159)
                                 res.json({'value':'success','data':val159})
                             }
                             data159();
