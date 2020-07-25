@@ -64,6 +64,7 @@ module.exports={
                     if (err) { throw err }
                         let temp = data
                             img_url.length = 0;
+                            console.log(temp)
                             for (let i = 0; i < temp.length; i++) {
                                 if (/.jpg$/.test(temp[i])) {
                                     cloudinary.uploader.upload(`uploads/${temp[i]}`, (err, result) => {
