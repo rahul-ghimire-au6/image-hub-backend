@@ -7,9 +7,9 @@ module.exports = async (req, res, next) => {
             if (admin){
                 req.user = admin
                }
-               else return res.send({'msg':"kindly login first"})  
+               else return res.send({'message':"kindly login first"})  
         }
-        else return res.send("kindly login first")
+        else return res.send({'message':"kindly login first"}) 
         next();
     }
     catch (err) {
